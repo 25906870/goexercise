@@ -2,12 +2,13 @@ package main
 
 import (
 	. "common"
-	. "swapPairs"
+	_ "swapPairs"
 	. "mergeklist"
+	. "reverseKGroup"
 )
 
 func main(){
-	nums := []int{1,2,3,4}
+	nums := []int{1,2}
 	head := new(ListNode)
 	tmp := head
 	head.Val = nums[0]
@@ -18,8 +19,8 @@ func main(){
 		tmp = tmp.Next	
 		
 	}
-
-	SwapPairs(head)
+	ReverseKGroup(head,2)
+	//SwapPairs(head)
 
 	return 
 	iNums := [][]int{{},{}}
