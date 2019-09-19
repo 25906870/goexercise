@@ -1,4 +1,4 @@
-pkg/
+pkg/windows_amd64/
 src/github.com/
 *.a
 .vscode/
