@@ -7,9 +7,20 @@ import (
 	. "removeDuplicate"
 	. "reverseKGroup"
 	_ "swapPairs"
+	. "strRelated"
 )
 
-func main() {
+
+func main(){
+	str := "mississippi"
+	strs1 := "issipi"
+	//ret := RemoveDuplicates(nums)
+	ret := MystrStr(str, strs1)
+	
+	fmt.Println(ret)
+}
+
+func Remvoemain() {
 	nums := []int{2, 2, 0, 2, 1, 2, 3, 2}
 	//ret := RemoveDuplicates(nums)
 	ret := RemoveElement(nums, 2)
