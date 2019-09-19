@@ -10,9 +10,9 @@ import (
 )
 
 func main() {
-	nums := []int{1, 0, 1, 2, 3, 3, 4, 4, 5}
-	ret := RemoveDuplicates(nums)
-
+	nums := []int{2, 2, 0, 2, 1, 2, 3, 2}
+	//ret := RemoveDuplicates(nums)
+	ret := RemoveElement(nums, 2)
 	for i := 0; i < ret; i++ {
 		fmt.Println(nums[i])
 	}
