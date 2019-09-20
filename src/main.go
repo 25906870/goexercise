@@ -13,8 +13,11 @@ import (
 
 func main() {
 	//ret := Divide(-10, 3)
-
-	ret := DividePro(-5, -1)
+	//-2147483648
+	//-1
+	num := 2147483648
+	ret := DividePro(num, -1)
+	fmt.Printf("num %b | %b\n", num,ret)
 	fmt.Println(ret)
 }
 

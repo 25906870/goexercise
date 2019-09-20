@@ -54,42 +54,37 @@ func DividePro(dividend int, divisor int) int {
 		divisor = abs(divisor)
 	}
 
-	count := 0
+	count := 1
 	if dividend > divisor {
 		tmp := divisor
 		for dividend > tmp {
 			tmp <<= 1
-			if dividend > tmp {
+			if dividend >= tmp {
 				divisor = tmp
 				count++
 			}
 		}
 	}
 
-	for index := 0; index < count; {
+	for index := 0; index < count; index++ {
 		if dividend < divisor {
-			if dividend <= 0 {
-				tag <<= 1
-			} else {
-				tag <<= 1
-				tag |= 0x01
-				divisor >>= 1
-			}
-			index++
-		} else {
+			tag <<= 1
+		}else if dividend != 0  {
+			dividend = dividend - divisor
 			tag <<= 1
 			tag |= 0x01
 		}
-
-		if dividend != 0 {
-			dividend = dividend - divisor
-		}
-
+		divisor >>= 1
 	}
 
 	if flag == -1 {
 		return -tag
 	}
+
+	if tag >= INT_MAX  {
+        return INT_MAX 
+    }
+
 	fmt.Printf("%b\n", tag)
 	return tag
 
