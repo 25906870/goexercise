@@ -4,19 +4,24 @@ import (
 	. "common"
 	"fmt"
 	. "mergeklist"
+	. "numRelated"
 	. "removeDuplicate"
 	. "reverseKGroup"
-	_ "swapPairs"
 	. "strRelated"
+	_ "swapPairs"
 )
 
+func main() {
+	ret := Divide(-10, 3)
+	fmt.Println(ret)
+}
 
-func main(){
+func MystrStrmain() {
 	str := "mississippi"
 	strs1 := "issipi"
 	//ret := RemoveDuplicates(nums)
 	ret := MystrStr(str, strs1)
-	
+
 	fmt.Println(ret)
 }
 
