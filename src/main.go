@@ -12,7 +12,9 @@ import (
 )
 
 func main() {
-	ret := Divide(-10, 3)
+	//ret := Divide(-10, 3)
+
+	ret := DividePro(-5, -1)
 	fmt.Println(ret)
 }
 

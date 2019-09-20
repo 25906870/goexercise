@@ -1,7 +1,9 @@
 package numRelated
 
+import "fmt"
+
 func abs(num int) int {
-	return num ^ (-1 >> 31) - (-1 >> 31)
+	return num ^ -1 - (-1 >> 31)
 }
 
 const INT_MAX = int(^uint32(0) >> 1)
@@ -35,6 +37,60 @@ func Divide(dividend int, divisor int) int {
 		return INT_MAX
 	}
 
+	return tag
+
+}
+
+func DividePro(dividend int, divisor int) int {
+
+	tag := 0
+	flag := 1
+	if dividend < 0 {
+		flag = -1
+		dividend = abs(dividend)
+	}
+	if divisor < 0 {
+		flag = 0 - flag
+		divisor = abs(divisor)
+	}
+
+	count := 0
+	if dividend > divisor {
+		tmp := divisor
+		for dividend > tmp {
+			tmp <<= 1
+			if dividend > tmp {
+				divisor = tmp
+				count++
+			}
+		}
+	}
+
+	for index := 0; index < count; {
+		if dividend < divisor {
+			if dividend <= 0 {
+				tag <<= 1
+			} else {
+				tag <<= 1
+				tag |= 0x01
+				divisor >>= 1
+			}
+			index++
+		} else {
+			tag <<= 1
+			tag |= 0x01
+		}
+
+		if dividend != 0 {
+			dividend = dividend - divisor
+		}
+
+	}
+
+	if flag == -1 {
+		return -tag
+	}
+	fmt.Printf("%b\n", tag)
 	return tag
 
 }
