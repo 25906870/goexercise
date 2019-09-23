@@ -1,5 +1,7 @@
-set gopath=D:/goproject/goexercise
-cd ./bin
-go build ../src/main.go
+@echo off
+set GOPATH=%cd%
+cd ./bin/windows
+@echo on
+go build ../../src/main.go
 cd ..
 pause

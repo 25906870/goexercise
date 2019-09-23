@@ -1,4 +1,4 @@
-package strRelated
+package strrelated
 
 func MystrStr(haystack string, needle string) int {
 	if len(needle) == 0 {
