@@ -4,7 +4,7 @@ import (
 	_ "common"
 	"fmt"
 	_ "mergeklist"
-	_ "numRelated"
+	. "numRelated"
 	_ "removeDuplicate"
 	_ "reverseKGroup"
 	. "strrelated"
@@ -13,6 +13,16 @@ import (
 )
 
 func main() {
+
+	in := 20.0
+	n := 5
+
+	lvp := MyPow(in, n)
+
+	fmt.Printf("LongestValidParentheses %v", lvp)
+}
+
+func LongestValidParenthesesmain() {
 	s := "(()(()"
 	lvp := LongestValidParentheses(s)
 
