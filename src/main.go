@@ -7,12 +7,21 @@ import (
 	. "numRelated"
 	_ "removeDuplicate"
 	_ "reverseKGroup"
+	. "sortrelated"
 	. "strrelated"
 	_ "swapPairs"
 	"time"
 )
 
 func main() {
+
+	nums := []int{4, 5, 6, 7, 0, 1, 2}
+	tag := 0
+	res := Findtaget(nums, tag)
+	fmt.Printf("Findtaget %v", res)
+}
+
+func MyPowmain() {
 
 	in := 20.0
 	n := 5
