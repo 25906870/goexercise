@@ -4,7 +4,7 @@ import (
 	_ "common"
 	"fmt"
 	_ "mergeklist"
-	_ "numRelated"
+	. "numRelated"
 	_ "removeDuplicate"
 	_ "reverseKGroup"
 	. "strrelated"
@@ -13,6 +13,23 @@ import (
 )
 
 func main() {
+
+	in := 20.0
+	n := 5
+
+	lvp := MyPow(in, n)
+
+	fmt.Printf("LongestValidParentheses %v", lvp)
+}
+
+func LongestValidParenthesesmain() {
+	s := "(()(()"
+	lvp := LongestValidParentheses(s)
+
+	fmt.Printf("LongestValidParentheses %v", lvp)
+}
+
+func FindSubstringmain() {
 	str1 := "foobarfoobar"
 	words1 := []string{"foo", "bar"}
 	timestamp := time.Now().Unix()
