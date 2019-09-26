@@ -13,6 +13,13 @@ import (
 )
 
 func main() {
+	s := "(()(()"
+	lvp := LongestValidParentheses(s)
+
+	fmt.Printf("LongestValidParentheses %v", lvp)
+}
+
+func FindSubstringmain() {
 	str1 := "foobarfoobar"
 	words1 := []string{"foo", "bar"}
 	timestamp := time.Now().Unix()
