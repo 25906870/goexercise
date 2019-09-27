@@ -14,6 +14,13 @@ import (
 )
 
 func main() {
+	nums := []int{5, 5, 5}
+	tag := 5
+	res := SearchRange(nums, tag)
+	fmt.Printf("SearchRange %v", res)
+}
+
+func findmain() {
 
 	nums := []int{4, 5, 6, 7, 0, 1, 2}
 	tag := 0
