@@ -76,7 +76,6 @@ func SearchRange(nums []int, target int) []int {
 			}
 
 			if rfinish == 0 && lfinish == 0 || (li < 0 && ri > len(nums)-1) {
-
 				break
 			}
 		}

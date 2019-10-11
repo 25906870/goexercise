@@ -5,6 +5,7 @@ import (
 	"fmt"
 	_ "mergeklist"
 	. "numRelated"
+	. "producer"
 	_ "removeDuplicate"
 	_ "reverseKGroup"
 	. "sortrelated"
@@ -14,9 +15,13 @@ import (
 )
 
 func main() {
-	nums := []int{5, 5, 5}
-	tag := 5
-	res := SearchRange(nums, tag)
+
+	RunChCache()
+
+	return
+	nums := []int{1, 3, 5}
+	tag := 2
+	res := SearchInsert(nums, tag)
 	fmt.Printf("SearchRange %v", res)
 }
 
