@@ -1,17 +1,15 @@
 package main
 
 import (
-	_ "common"
-	"fmt"
-	_ "mergeklist"
-	. "numRelated"
-	. "producer"
-	_ "removeDuplicate"
-	_ "reverseKGroup"
-	. "sortrelated"
-	. "strrelated"
-	_ "swapPairs"
-	"time"
+	_ "src/common"
+	// _ "src/mergeklist"
+	// . "src/numRelated"
+	. "src/producer"
+	// _ "src/removeDuplicate"
+	// _ "src/reverseKGroup"
+	// . "src/sortrelated"
+	// . "src/strrelated"
+	// _ "src/swapPairs"
 )
 
 func main() {
@@ -19,12 +17,12 @@ func main() {
 	RunChCache()
 
 	return
-	nums := []int{1, 3, 5}
-	tag := 2
-	res := SearchInsert(nums, tag)
-	fmt.Printf("SearchRange %v", res)
+	// nums := []int{1, 3, 5}
+	// tag := 2
+	// res := SearchInsert(nums, tag)
+	// fmt.Printf("SearchRange %v", res)
 }
-
+/*
 func findmain() {
 
 	nums := []int{4, 5, 6, 7, 0, 1, 2}
@@ -66,7 +64,7 @@ func FindSubstringmain() {
 	fmt.Printf("string %v", time.Now().Unix()-timestamp)
 }
 
-/*
+
 func Dividemain() {
 	//ret := Divide(-10, 3)
 	//-2147483648

@@ -2,6 +2,7 @@ package producer
 
 import (
 	"fmt"
+	"time"
 )
 
 const count = 10
@@ -20,6 +21,7 @@ func producer(name string, ch chan<- int) {
 		ch <- index
 		fmt.Println("producer--", name, ":", index)
 	}
+	time.Sleep(time.Second)
 	close(ch)
 }
 
